@@ -1,0 +1,37 @@
+.content {
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px #111 solid;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.field {
+  padding: 10px;
+}
+
+input {
+   border-radius: 3px;
+}
+
+.create_acount {
+  height:30px;
+  border-color: #a88734 #9c7e31 #846a29;
+  background: #f0c14b;
+}
+
+.acount_form {
+  height: 20px;
+  width: 200px;
+}
+
+.select_form {
+  height: 30px;
+  width: 150px;
+  text-align-last:center;
+}
+
+ul {
+  list-style:none;
+}
