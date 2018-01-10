@@ -104,3 +104,13 @@ a:visited { color: #000080; }
 a:hover { color: #ff0000; }
 a:active { color: #ff8000; }
 
+
+.user-image {
+  max-height: 300px;
+  max-width: 300px;
+  display: block;
+  background-color: #eee;
+  margin: 100px 140px;
+  text-align: center;
+  line-height: 17;
+}
