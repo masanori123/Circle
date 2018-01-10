@@ -6,9 +6,10 @@
       <li><a>フォロー</a></li>
       <li><a>フォロワー</a></li>
       <li><a>ユーザー検索</a></li>
-      <li><a>プロフィール編集</a></li>
+      <li><%= link_to "プロフィール編集", edit_user_path(@user.id) %></a></li>
       <li><a>お問い合わせ</a></li>
       <li><a>利用規約</a></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%></li>
     </ul>
   </div>
   <div class="right-content">
@@ -19,22 +20,22 @@
         </div>
       </div>
       <div class="content-b">
-        ユーザー名：テスト
+        ユーザー名：<%= @user.name %>
       </div>
       <div class="content-b">
-        チーム名：  サッカー
+        チーム名：  <%= @user.team_name %>
       </div>
     </div>
     <div class="introduct-content">
       <div class="c-content">チーム紹介</div>
       <div class="c-introduct-content">
-        ここにはチームの紹介文が入ります。
+        <%= @user.body %>
       </div>
     </div>
     <div class="result-content">
       <div class="c-content">試合結果</div>
       <div class="c-introduct-content">
-        ここは試合結果が入ります。
+        <%= @user.result %>
       </div>
     </div>
   </div>

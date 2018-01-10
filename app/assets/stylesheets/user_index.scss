@@ -28,6 +28,7 @@ li {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .right-content {
@@ -97,4 +98,9 @@ a {
   width: calc( 100vw - 200px );
   clear: both;
 }
+
+a:link { color: #111; }
+a:visited { color: #000080; }
+a:hover { color: #ff0000; }
+a:active { color: #ff8000; }
 
