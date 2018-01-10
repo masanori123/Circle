@@ -1,0 +1,100 @@
+body {
+  margin: 0 auto;
+}
+.a-content {
+  box-sizing: border-box;
+}
+
+.left-content {
+  background-color: #CCFFFF;
+  height: 100vh;
+  width: 200px;
+  float: left;
+}
+
+.info-content {
+  width: 95%;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-left: 5px;
+}
+
+li {
+  margin-top: 20px;
+  border: 1px solid #330000 ;
+  border-radius: 5px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.right-content {
+  height: 100vh;
+  width: calc( 100vw - 200px );
+  float: left;
+  background-color: #FFFFCC;
+  overflow-y: scroll;
+}
+
+.head-content {
+  border: 1px solid #111;
+  height: 70%;
+}
+
+.p-image-content {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+.image-content {
+  display: block;
+  min-height: 300px;
+  min-width: 300px;
+  background-color: #eee;
+  margin: 100px 140px;
+  text-align: center;
+  line-height: 17;
+}
+
+.content-b {
+  height: 50%;
+  width: 50%;
+  background-color: #FFFFFF;
+  float: left;
+  text-align: center;
+  line-height: 8;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+  font-size: 120%;
+}
+
+.introduct-content {
+  width: calc( 100vw - 200px );
+  clear: both;
+}
+
+.c-content {
+  width:83px;
+  border: 1px solid #111;
+  border-radius: 3px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.c-introduct-content {
+  overflow-y: scroll;
+  width: 70%;
+  min-height: 300px;
+  border: 1px solid #111;
+  border-radius: 5px;
+  margin: 10px 20px;
+}
+
+.result-content {
+  width: calc( 100vw - 200px );
+  clear: both;
+}
+
