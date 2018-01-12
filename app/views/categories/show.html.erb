@@ -1,5 +1,7 @@
 <div class=section>
+  <!-- ユーザーをそれぞれ個別にする処理 -->
   <% @users.each do |user| %>
+  <!-- category_idが等しいユーザーのみ表示されるようにif分岐で分ける -->
     <% if @category.id == user.category_id %>
     <%= user.name %>
     <% end %>
