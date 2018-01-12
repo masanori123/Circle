@@ -1,0 +1,7 @@
+<div class=section>
+  <% @users.each do |user| %>
+    <% if @category.id == user.category_id %>
+    <%= user.name %>
+    <% end %>
+  <% end %>
+</div>
