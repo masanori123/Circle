@@ -1,0 +1,155 @@
+  <div id="main_cnt_wrapper">
+    <div id="yjContentsBody">
+      <div class="yjContainer">
+        <div id="categories"><span>ユーザー検索</span></div>
+        <!-- カテゴリー検索 -->
+        <div class="categories-content">
+          <div class="parent-content-a">
+            <div class="region-content-a">
+              <ul>
+                <h2 class="font-size">北海道</h2>
+                <li><a url="/", class="region">北海道</a></li>
+              </ul>
+            </div>
+            <div class="region-content-a">
+              <h2 class="font-size">東北地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">青森県</a></li>
+                <li class="region-2"><a url="/", class="region">岩手県</a></li>
+                <li class="region-2"><a url="/", class="region">宮城県</a></li>
+                <li class="region-2"><a url="/", class="region">秋田県</a></li>
+                <li class="region-2"><a url="/", class="region">山形県</a></li>
+                <li class="region-2"><a url="/", class="region">福島県</a></li>
+              </ul>
+            </div>
+            <div class="region-content-a">
+              <h2 class="font-size">関東地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">茨城県</a></li>
+                <li class="region-2"><a url="/", class="region">栃木県</a></li>
+                <li class="region-2"><a url="/", class="region">群馬県</a></li>
+                <li class="region-2"><a url="/", class="region">埼玉県</a></li>
+                <li class="region-2"><a url="/", class="region">千葉県</a></li>
+                <li class="region-2"><a url="/", class="region">東京都</a></li>
+                <li class="region-2"><a url="/", class="region">神奈川県</a></li>
+              </ul>
+            </div>
+            <div class="region-content-a">
+              <h2 class="font-size">北陸・甲信越地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">新潟県</a></li>
+                <li class="region-2"><a url="/", class="region">富山県</a></li>
+                <li class="region-2"><a url="/", class="region">石川県</a></li>
+                <li class="region-2"><a url="/", class="region">福井県</a></li>
+                <li class="region-2"><a url="/", class="region">山梨県</a></li>
+                <li class="region-2"><a url="/", class="region">長野県</a></li>
+              </ul>
+            </div>
+            <div class="region-content-a">
+              <h2 class="font-size">東海地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">岐阜県</a></li>
+                <li class="region-2"><a url="/", class="region">静岡県</a></li>
+                <li class="region-2"><a url="/", class="region">愛知県</a></li>
+                <li class="region-2"><a url="/", class="region">三重県</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="parent-content-b">
+            <div class="region-content-a">
+              <h2 class="font-size">近畿地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">滋賀県</a></li>
+                <li class="region-2"><a url="/", class="region">京都府</a></li>
+                <li class="region-2"><a url="/", class="region">大阪府</a></li>
+                <li class="region-2"><a url="/", class="region">兵庫県</a></li>
+                <li class="region-2"><a url="/", class="region">奈良県</a></li>
+                <li class="region-2"><a url="/", class="region">和歌山県</a></li>
+              </ul>
+            </div>
+            <div class="region-content-a">
+              <h2 class="font-size">中国地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">鳥取県</a></li>
+                <li class="region-2"><a url="/", class="region">島根県</a></li>
+                <li class="region-2"><a url="/", class="region">岡山県</a></li>
+                <li class="region-2"><a url="/", class="region">広島県</a></li>
+                <li class="region-2"><a url="/", class="region">山口県</a></li>
+              </ul>
+            </div>
+            <div class="region-content-a">
+              <h2 class="font-size">四国地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">徳島県</a></li>
+                <li class="region-2"><a url="/", class="region">香川県</a></li>
+                <li class="region-2"><a url="/", class="region">愛媛県</a></li>
+                <li class="region-2"><a url="/", class="region">高知県</a></li>
+              </ul>
+            </div>
+            <div class="region-content-a">
+              <h2 class="font-size">九州地方</h2>
+              <ul>
+                <li class="region-2"><a url="/", class="region">福岡県</a></li>
+                <li class="region-2"><a url="/", class="region">佐賀県</a></li>
+                <li class="region-2"><a url="/", class="region">長崎県</a></li>
+                <li class="region-2"><a url="/", class="region">熊本県</a></li>
+                <li class="region-2"><a url="/", class="region">大分県</a></li>
+                <li class="region-2"><a url="/", class="region">宮崎県</a></li>
+                <li class="region-2"><a url="/", class="region">鹿児島県</a></li>
+                <li class="region-2"><a url="/", class="region">沖縄県</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- インクリメンタルサーチ -->
+        <div id="yjMain">
+          <article class="section-a">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle">
+                  <i class="icon-movie color-gray-light"></i>ワードで検索
+                </h2>
+              </header>
+              <%= form_tag('/categories/search', method: :get) do %>
+                <input class="search__query" name="keyword" placeholder="ユーザー名で検索" type="text" value="">
+                <button class="btn-search" name="検索" type="submit">検索</button>
+                </input>
+              <% end %>
+              <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
+              </form>
+            </div>
+          </article>
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle" id="text-result">ユーザーリスト</h2>
+              </header>
+              <ul class="listview js-lazy-load-images">
+                <% @users.each do |user| %>
+                <li class="user-li">
+                  <!-- 飛ぶリンク先を個別になるようにprefixで記述する -->
+                  <%= link_to  user_path(user.id), class: "listview__element--right-icon" do %>
+                    <div class="profile-image">
+                        <% if user.image.present? %>
+                          <%= image_tag user.image, class: "image-a"  %>
+                        <% else %>
+                          <div class="no-profile-image">No Image</div>
+                        <% end %>
+                      </div>
+                    <div class="col6 push6">
+                      <h3 class="text-middle text-break">
+                        <span class="color-sub" style="width:26em;">ユーザー名：<%= user.name %></span>
+                      </h3>
+                      <p class="text-xsmall" style="width:26em;">
+                        チーム紹介：<%= user.body %>
+                      </p>
+                    </div>
+                  <% end %>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div id="yjSub">
+        <a href="/">トップページへ戻る</a>

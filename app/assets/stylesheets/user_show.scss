@@ -20,7 +20,7 @@ body {
   margin-left: 5px;
 }
 
-li {
+.menu-content {
   margin-top: 20px;
   border: 1px solid #330000 ;
   border-radius: 5px;
@@ -113,4 +113,8 @@ a:active { color: #ff8000; }
   margin: 100px 140px;
   text-align: center;
   line-height: 17;
+}
+
+.link-root {
+  margin: 10px !important;
 }
