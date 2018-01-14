@@ -1,0 +1,46 @@
+<div class="category">
+  <hr>
+  <div class="title">
+    <span class="eng-lang">SEARCH RESULTS</span><br />
+    <span class="ja-lang">ユーザー一覧</span>
+  </div>
+  <hr>
+  <%= link_to "ユーザー検索へ戻る", search_categories_path %><br />
+  <%= link_to "トップページへ戻る", root_path(current_user[:id]) %>
+  <div class="parent-users">
+      <!-- ユーザーをそれぞれ個別にする処理 -->
+    <% @users.each do |user| %>
+      <div class="users-list">
+        <!-- category_idが等しいユーザーのみ表示されるようにif分岐で分ける -->
+        <% if @category.id == user.category_id %>
+          <!-- 飛ぶリンク先を個別になるようにprefixで記述する -->
+          <%= link_to  user_path(user.id), class: "listview__element--right-icon" do %>
+            <div class="user-list">
+              <div class="user-image-box">
+                <% if user.image.present? %>
+                  <%= image_tag user.image, class: "user-image-a" %>
+                <% else %>
+                  <div class="no-image-box">No Image</div>
+                <% end %>
+              </div>
+              <div class="introduct-box">
+                <div class="user-name-box">
+                  ユーザー名：<%= user.name %>
+                  チーム名：<%= user.team_name %>
+                </div>
+                <div class="user-name-box">
+                  チーム名：<%= user.team_name %>
+                </div>
+                <div class="user-product-box">
+                  <% if user.body.present? %>
+                   <%= user.body %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

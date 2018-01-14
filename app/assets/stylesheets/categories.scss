@@ -1,0 +1,88 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.title {
+  text-align: center;
+  height: 200px;
+}
+
+.eng-lang {
+  font-size: 30px;
+  color: #777;
+  line-height: 5;
+}
+
+.ja-lang {
+  font-size: 20;
+  color: #777;
+}
+
+.parent-users {
+  box-sizing: border-box;
+  width: 650px;
+  margin: 0 auto;
+  padding: 1px;
+}
+
+.users-list {
+  border: 1px #eee solid;
+  width: 650px;
+  background-color: #EEE;
+}
+
+.user-list {
+  margin: 10px 20px 10px 70px;
+  height: 200px;
+  width: 500px;
+  border: 0.5px solid #111;
+  background-color: white;
+}
+
+.user-image-box {
+  height: 100%;
+  width: 200px;
+  float: left;
+}
+
+.user-image-a {
+  height: 99%;
+  width: 100%;
+}
+
+.no-image-box {
+  height: 99%;
+  width: 100%;
+  text-align: center;
+  background-color: #FFFFCC;
+  line-height: 11;
+}
+
+.introduct-box {
+  height: 100%;
+  width: 300px;
+  float: right;
+}
+
+.user-name-box {
+  height: 30%;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 3.5;
+  border-bottom: 1px solid #eee;
+}
+
+.user-product-box {
+  line-height: 5;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-list:after {
+  content:" ";
+  display: block;
+  clear: both;
+}
