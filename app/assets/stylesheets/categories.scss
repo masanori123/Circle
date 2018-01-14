@@ -17,11 +17,17 @@
   font-size: 20;
   color: #777;
 }
-.users-list {
+
+.parent-users {
   box-sizing: border-box;
-  border: 1px #111 solid;
   width: 650px;
   margin: 0 auto;
+  padding: 1px;
+}
+
+.users-list {
+  border: 1px #eee solid;
+  width: 650px;
   background-color: #EEE;
 }
 

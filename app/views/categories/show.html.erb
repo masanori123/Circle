@@ -5,35 +5,37 @@
     <span class="ja-lang">ユーザー一覧</span>
   </div>
   <hr>
-  <div class="users-list">
+  <div class="parent-users">
       <!-- ユーザーをそれぞれ個別にする処理 -->
     <% @users.each do |user| %>
     <!-- category_idが等しいユーザーのみ表示されるようにif分岐で分ける -->
-      <% if @category.id == user.category_id %>
-        <div class="user-list">
-          <div class="user-image-box">
-            <% if user.image.present? %>
-              <%= image_tag user.image, class: "user-image-a" %>
-            <% else %>
-              <div class="no-image-box">No Image</div>
-            <% end %>
-          </div>
-          <div class="introduct-box">
-            <div class="user-name-box">
-              ユーザー名：<%= user.name %>
-              チーム名：<%= user.team_name %>
-            </div>
-            <div class="user-name-box">
-              チーム名：<%= user.team_name %>
-            </div>
-            <div class="user-product-box">
-              <% if user.body.present? %>
-               <%= user.body %>
+      <div class="users-list">
+        <% if @category.id == user.category_id %>
+          <div class="user-list">
+            <div class="user-image-box">
+              <% if user.image.present? %>
+                <%= image_tag user.image, class: "user-image-a" %>
+              <% else %>
+                <div class="no-image-box">No Image</div>
               <% end %>
             </div>
+            <div class="introduct-box">
+              <div class="user-name-box">
+                ユーザー名：<%= user.name %>
+                チーム名：<%= user.team_name %>
+              </div>
+              <div class="user-name-box">
+                チーム名：<%= user.team_name %>
+              </div>
+              <div class="user-product-box">
+                <% if user.body.present? %>
+                 <%= user.body %>
+                <% end %>
+              </div>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
