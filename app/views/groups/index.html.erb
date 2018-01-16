@@ -10,13 +10,15 @@
       <!-- ユーザーをそれぞれ個別にする処理 -->
     <% @groups.each do |group| %>
       <div class="users-list">
-        <div class="user-list">
-          <div class="introduct-box">
-            <div class="user-name-box">
-              チャットルーム名：<%= group.group_name %>
+        <%= link_to group_messages_path(group.id) do %>
+          <div class="user-list">
+            <div class="introduct-box">
+              <div class="user-name-box">
+                チャットルーム名：<%= group.group_name %>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
         <%= link_to "削除", group_path(group.id), method: :delete, class: "delete-button" %>
       </div>
     <% end %>

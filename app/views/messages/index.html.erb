@@ -1,0 +1,18 @@
+<div class="a-content">
+  <div class="left-content">
+    <div class="chat-current-user-name">
+      <%= @user.name %>
+    </div>
+    <div class="chat-current-user-groups">
+      <h3>チャットリスト</h3>
+      <% @groups.each do |group| %>
+        <div class="chat-group-name">
+          <%= link_to group_messages_path(group.id) do %>
+            <%= group.group_name %>
+          <% end %>
+        </div>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
