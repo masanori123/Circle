@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
 
   def index
+    @groups = current_user.groups
   end
 
   def new
@@ -17,6 +18,9 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    group = Group.find(params[:id])
+    group.destroy
+    redirect_to root_path, notice: 'グループを削除しました'
   end
 
   private
