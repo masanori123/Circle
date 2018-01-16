@@ -6,7 +6,7 @@
   </div>
   <hr>
   <%= link_to "ユーザー検索へ戻る", search_categories_path %><br />
-  <%= link_to "トップページへ戻る", root_path(current_user[:id]) %>
+  <%= link_to "マイページへ戻る", root_path(current_user[:id]) %>
   <div class="parent-users">
       <!-- ユーザーをそれぞれ個別にする処理 -->
     <% @users.each do |user| %>

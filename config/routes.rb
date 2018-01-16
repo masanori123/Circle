@@ -9,4 +9,7 @@ Rails.application.routes.draw do
       get 'suggest'
     end
   end
+  resources :groups, only: [:index, :new, :create, :destroy] do
+    resources :messages, only: [:index, :create, :destroy]
+  end
 end

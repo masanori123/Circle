@@ -1,0 +1,51 @@
+<div class="a-content">
+  <div class="left-content">
+    <div class="chat-current-user-name">
+      <%= @user.name %><br>
+      <%= link_to "マイページへ戻る", root_path(current_user[:id]) %>
+    </div>
+    <div class="chat-current-user-groups">
+      <h3>チャットリスト</h3>
+      <% @groups.each do |group| %>
+        <div class="chat-group-name">
+          <%= link_to group_messages_path(group.id) do %>
+            <%= group.group_name %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="right-content">
+    <div class="min-title">
+      <span class="title-c">CHAT ROOM</span><br />
+      <%= @group.group_name %><br />
+      <div class="members">
+        MEMBER: <%= @user.name %>
+      </div>
+    </div>
+    <div class="body-box">
+      <% @messages.each do |m| %>
+        <div class="text-content">
+          <div class="text-user-name">
+            <%= m.user.name %>
+          </div>
+          <div class="text-created">
+            <%= m.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+          </div>
+          <div class="text-body">
+            <%= m.body %>
+          </div>
+          <%= link_to "削除", group_message_path(m.group.id, m.id), method: :delete, class: "message-delete-button" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="chat-footer">
+      <%= form_for [@group, @message], html: {id: 'item_form', class: 'message-form'} do |f| %>
+        <div class="text-body-form">
+          <%= f.text_field :body, placeholder: "メッセージを入力してください" %>
+          <%= f.submit "送信", class: "submit" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

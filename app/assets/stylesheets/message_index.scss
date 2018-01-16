@@ -1,0 +1,109 @@
+.chat-current-user-name {
+  height: 15%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  display: block;
+  border-bottom: 2px solid #888;
+}
+
+.chat-current-user-groups {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.chat-group-name {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+}
+
+.min-title {
+  height: 15%;
+  text-align: center;
+  border-bottom: 2px solid #888;
+}
+
+.title-c {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.members {
+  text-align: left;
+  margin-left: 10px;
+  color: #C0C0C0;
+}
+
+.body-box {
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: calc( 100vh - 15% - 110px );
+  overflow-y: scroll;
+}
+
+.chat-footer {
+  height: 110px;
+  width: 100%;
+}
+
+.message-form {
+  height: 100%;
+  width: 100%;
+}
+
+.text-body-form {
+  height: 100%;
+  width: 100%;
+}
+
+#message_body {
+  height: 10px;
+  width: calc( 100% - 130px );
+  padding: 15px 10px;
+  border: none;
+  margin: 10px;
+  font-size: 18px;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.text-content {
+  padding-left: 40px;
+  border-bottom: 0.5px solid #ddd;
+}
+
+.text-user-name {
+  float: left;
+  text-align: left;
+  font-size: 18px;
+}
+
+.text-created {
+  font-size: 12px;
+  clear: both;
+  text-align: left;
+  color: #888;
+}
+
+.text-body {
+  text-align: left;
+}
+
+.message-delete-button {
+  text-align: left;
+  border: 1px solid #111;
+  border-radius: 5px;
+  background-color: #FF9872;
+  float: left;
+}
+
+.text-content:after {
+  content:" ";
+  display: block;
+  clear: both;
+}

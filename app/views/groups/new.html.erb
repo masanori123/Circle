@@ -1,0 +1,20 @@
+<div class="content">
+  <h2>チャットルームの作成</h2>
+  <%= form_for @group do |f| %>
+    <div class="field">
+      <%= f.label "チャットルーム名" %><br />
+      <%= f.text_field :group_name, class: "acount_form" %>
+    </div>
+    <div class="field">
+      <%= f.label "ユーザーを選択してください" %><br />
+      <!-- 自分も選択しないと表示されない(のちに仕様そのものを改善) -->
+      <%= f.label "※ 自分も選択してください" %><br />
+      <%= f.collection_check_boxes(:user_ids, User.all, :id, :name) do |b| %>
+        <%= b.label {b.check_box + b.text} %>
+      <% end %>
+    </div>
+    <div class="actions">
+      <%= f.submit "チャットルームを作成", class: "create_acount" %>
+    </div>
+  <% end %>
+</div>
