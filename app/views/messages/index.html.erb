@@ -1,7 +1,8 @@
 <div class="a-content">
   <div class="left-content">
     <div class="chat-current-user-name">
-      <%= @user.name %>
+      <%= @user.name %><br>
+      <%= link_to "マイページへ戻る", root_path(current_user[:id]) %>
     </div>
     <div class="chat-current-user-groups">
       <h3>チャットリスト</h3>
