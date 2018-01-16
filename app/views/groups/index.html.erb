@@ -5,6 +5,7 @@
     <span class="ja-lang">チャット リスト</span>
   </div>
   <hr>
+  <%= link_to "新規チャットルームを作成する", new_group_path %><br>
   <%= link_to "マイページへ戻る", root_path(current_user[:id]) %>
   <div class="parent-users">
       <!-- ユーザーをそれぞれ個別にする処理 -->
