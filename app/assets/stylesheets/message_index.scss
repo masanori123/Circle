@@ -93,3 +93,17 @@
 .text-body {
   text-align: left;
 }
+
+.message-delete-button {
+  text-align: left;
+  border: 1px solid #111;
+  border-radius: 5px;
+  background-color: #FF9872;
+  float: left;
+}
+
+.text-content:after {
+  content:" ";
+  display: block;
+  clear: both;
+}

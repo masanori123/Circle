@@ -16,6 +16,13 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
+    selected_group = Group.find(params[:group_id])
+    redirect_to group_messages_path(selected_group, message.id), notice: 'メッセージを削除しました'
+  end
+
   private
 
   def message_params

@@ -35,6 +35,7 @@
           <div class="text-body">
             <%= m.body %>
           </div>
+          <%= link_to "削除", group_message_path(m.group.id, m.id), method: :delete, class: "message-delete-button" %>
         </div>
       <% end %>
     </div>
