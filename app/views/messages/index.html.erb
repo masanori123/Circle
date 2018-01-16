@@ -11,7 +11,38 @@
             <%= group.group_name %>
           <% end %>
         </div>
-        <hr>
+      <% end %>
+    </div>
+  </div>
+  <div class="right-content">
+    <div class="min-title">
+      <span class="title-c">CHAT ROOM</span><br />
+      <%= @group.group_name %><br />
+      <div class="members">
+        MEMBER: <%= @user.name %>
+      </div>
+    </div>
+    <div class="body-box">
+      <% @messages.each do |m| %>
+        <div class="text-content">
+          <div class="text-user-name">
+            <%= m.user.name %>
+          </div>
+          <div class="text-created">
+            <%= m.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+          </div>
+          <div class="text-body">
+            <%= m.body %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="chat-footer">
+      <%= form_for [@group, @message], html: {id: 'item_form', class: 'message-form'} do |f| %>
+        <div class="text-body-form">
+          <%= f.text_field :body, placeholder: "メッセージを入力してください" %>
+          <%= f.submit "送信", class: "submit" %>
+        </div>
       <% end %>
     </div>
   </div>
