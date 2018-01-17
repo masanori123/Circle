@@ -17,14 +17,17 @@ class User < ApplicationRecord
   has_many :follower_relationships, foreign_key: "following_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :follower_relationships
 
+# フォローしているかしていないか調べる処理
   def following?(other_user)
     following_relationships.find_by(following_id: other_user.id)
   end
 
+# フォローをする処理
   def follow!(other_user)
     following_relationships.create!(following_id: other_user.id)
   end
 
+# フォローを解除する処理
   def unfollow!(other_user)
     following_relationships.find_by(following_id: other_user.id).destroy
   end

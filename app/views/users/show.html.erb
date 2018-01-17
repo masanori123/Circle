@@ -2,8 +2,18 @@
   <div class="left-content">
     <ul class="info-content">
       <li class="menu-content"><%= link_to "メッセージを送る", new_group_path %></li>
-      <li class="menu-content"><a>フォローする</a></li>
-      <li class="menu-content"><a>フォロワー</a></li>
+      <% if current_user.id != @user.id %>
+        <li class="menu-content">
+          <a>
+            <span id="user_<%= @user.id %>" class="follow-wrapper">
+              <%= render 'follow_form', user: @user if signed_in? %>
+            </span>
+          </a>
+        </li>
+      <% end %>
+      <h4>
+        <%= render 'users/stats' %>
+      </h4>
       <li class="menu-content"><%= link_to "ユーザー検索", search_categories_path %></li>
     </ul>
     <%= link_to "マイページへ戻る", root_path(current_user[:id]), class: "link-root" %>
