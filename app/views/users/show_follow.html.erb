@@ -1,0 +1,32 @@
+<div class="row">
+  <aside class="span4">
+    <section>
+    <h2 id="follow-title"><%= @title %></h2>
+      <% if @users.any? %>
+        <% @users.each do |user| %>
+        <li class="user-li">
+          <!-- 飛ぶリンク先を個別になるようにprefixで記述する -->
+          <%= link_to  user_path(user.id), class: "listview__element--right-icon" do %>
+            <div class="profile-image">
+                <% if user.image.present? %>
+                  <%= image_tag user.image, class: "image-a"  %>
+                <% else %>
+                  <div class="no-profile-image">No Image</div>
+                <% end %>
+              </div>
+            <div class="col6 push6">
+              <h3 class="text-middle text-break">
+                <span class="color-sub" style="width:26em;">ユーザー名：<%= user.name %></span>
+              </h3>
+              <p class="text-xsmall" style="width:26em;">
+                チーム紹介：<%= user.body %>
+              </p>
+            </div>
+          <% end %>
+        </li>
+        <% end %>
+      <% end %>
+    </section>
+  </aside>
+  <%= link_to "マイページへ戻る", root_path(current_user[:id]), class: "link-root" %>
+</div>
